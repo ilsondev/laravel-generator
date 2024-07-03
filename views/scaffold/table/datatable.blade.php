@@ -34,7 +34,8 @@ class {{ $config->modelNames->name }}DataTable extends DataTable
      */
     public function query({{ $config->modelNames->name }} $model)
     {
-        return $model->newQuery();
+        // return $model->newQuery();
+        return $this->applyScopes($model::query()->where('user_id', auth()->id()));
     }
 
     /**
