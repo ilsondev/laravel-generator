@@ -130,11 +130,11 @@ return [
 
     'options' => [
 
-        'soft_delete' => false,
+        'soft_delete' => true,
 
         'save_schema_file' => true,
 
-        'localized' => false,
+        'localized' => true,
 
         'repository_pattern' => true,
 
@@ -176,7 +176,7 @@ return [
     |
     */
 
-    'tables' => 'blade',
+    'tables' => 'datatables',
 
     /*
     |--------------------------------------------------------------------------

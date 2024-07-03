@@ -48,17 +48,25 @@ class {{ $config->modelNames->name }}DataTable extends DataTable
             ->columns($this->getColumns())
             ->minifiedAjax()
             ->addAction(['width' => '120px', 'printable' => false])
+            ->responsive(true)
             ->parameters([
                 'dom'       => 'Bfrtip',
                 'stateSave' => true,
                 'order'     => [[0, 'desc']],
+                'language'  => [
+                    'paginate' => [
+                    'next'     => __('app.datatable.next') . ' <i class="fa fa-arrow-right"></i>',
+                    'previous' => '<i class="fa fa-arrow-left"></i> ' . __('app.datatable.previous'),
+                    ],
+                    'info'     => __('app.datatable.showing') . ' _START_ - _END_ ' . __('app.datatable.of') . ' _TOTAL_ ' . __('app.datatable.entries'),
+                    'search'   => __('app.datatable.search') . ':',
+                ],
                 'buttons'   => [
-                    // Enable Buttons as per your need
-//                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
-//                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
-//                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner',],
-//                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner',],
-//                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner',],
+                    ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner', 'text' => '<i class="fa fa-plus"></i> ' . __('app.datatable.add-new')],
+                    ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner', 'text' => '<i class="fa fa-download"></i> ' . __('app.datatable.export')],
+                    ['extend' => 'print', 'className' => 'btn btn-default btn-sm no-corner', 'text' => '<i class="fa fa-print"></i> ' . __('app.datatable.print')],
+                    ['extend' => 'reset', 'className' => 'btn btn-default btn-sm no-corner', 'text' => '<i class="fa fa-undo"></i> ' . __('app.datatable.reset')],
+                    ['extend' => 'reload', 'className' => 'btn btn-default btn-sm no-corner', 'text' => '<i class="fa fa-sync"></i> ' . __('app.datatable.reload')],
                 ],
 @if($config->options->localized)
                 'language' => [
