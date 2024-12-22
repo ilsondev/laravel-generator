@@ -1,7 +1,6 @@
 {
     "name": "ilsondev/laravel-generator",
     "type": "library",
-    "version": "1.0.0",
     "description": "InfyOm Laravel Generator",
     "keywords": [
         "laravel",
