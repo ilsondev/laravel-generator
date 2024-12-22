@@ -1,6 +1,7 @@
 {
-    "name": "infyomlabs/laravel-generator",
+    "name": "ilsondev/laravel-generator",
     "type": "library",
+    "version": "1.0.0",
     "description": "InfyOm Laravel Generator",
     "keywords": [
         "laravel",
@@ -18,8 +19,8 @@
     ],
     "license": "MIT",
     "authors": [{
-        "name": "Mitul Golakiya",
-        "email": "me@mitul.me"
+        "name": "Ilson Nóbrega",
+        "email": "ilson.nobrega@gmail.com"
     }],
     "require": {
         "php": "^8.1.0",
