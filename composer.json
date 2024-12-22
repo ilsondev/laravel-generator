@@ -1,7 +1,7 @@
 {
     "name": "ilsondev/laravel-generator",
     "type": "library",
-    "description": "InfyOm Laravel Generator",
+    "description": "LTE Laravel Generator",
     "keywords": [
         "laravel",
         "api",
